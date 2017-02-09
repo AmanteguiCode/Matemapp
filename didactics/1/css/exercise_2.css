@@ -1,0 +1,8 @@
+.rock {
+    height: 40px;
+    opacity: 0.9;
+}
+
+#droppable-right > img {
+    vertical-align: middle;
+}

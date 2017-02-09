@@ -1,0 +1,61 @@
+diff a/profile/profile.php b/profile/profile.php	(rejected hunks)
+@@ -114,56 +114,57 @@
+                                         ";
+                                     }
+                                     ?>
+                                 </div>
+                             </div>
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+         <div class="modal fade" id="backpack" tabindex="-1" role="dialog" aria-labelledby="avatarLabel">
+             <div class="modal-dialog" role="document">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h2>Logros obtenidos</h2>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                 aria-hidden="true">&times;</span></button>
+                     </div>
+                     <form method="POST" id="avatar-form">
+                         <input type="hidden" name="avatar" id="avatar-input">
+                         <div class="modal-body">
+                             <div class="container">
+                                 <?php
+                                 $allAchievements = Achievement::achievements();
+                                 for ($i = 0; $i < count($allAchievements); $i++) {
+-                                    echo "<div class='col-xs-6'><text class='center-block'>{$allAchievements[$i]['condition']}</text>";
+ 
+                                     if (Achievement::isUnlockedByUser($_SESSION['user'], $allAchievements[$i]['id'])) {
++                                    echo "<div class='text-center col-xs-6' style='margin-top: 30px'>";
+                                         echo "<img data-toggle=\"modal\" data-target=\"#achievement{$allAchievements[$i]['id']}\" src='../{$allAchievements[$i]['url']}'> <text class='center-block'>{$allAchievements[$i]['name']}</text>";
+                                     } else {
+-                                        echo "<img src='../img/achievements/chest.png'>";
++                                    echo "<div class='text-center col-xs-6' style='margin-top: 30px'>";
++                                        echo "<img data-toggle='tooltip' title='{$allAchievements[$i]['condition']}' src='../img/achievements/chest.png'><text class='center-block'>Logro bloqueado</text>";
+                                     }
+                                     echo "</div>
+                                 <div class='modal fade' id='achievement{$allAchievements[$i]['id']}' tabindex=''-1' role='dialog' aria-labelledby='avatarLabel'>
+                                     <div class='modal-dialog' role='document'>
+                                         <div class='modal-content'>
+                                             <div class='text-center modal-header'>
+                                                 <h2>{$allAchievements[$i]['name']}</h2>
+                                                 <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span
+                                                         aria-hidden='true'>&times;</span></button>
+                                             </div>
+                                             <form method='POST' id='avatar-form'>
+                                                 <input type='hidden' name='avatar' id='avatar-input'>
+                                                 <div class='text-center modal-body'>
+                                                     
+                                                         <h2>Desbloqueado por {$allAchievements[$i]['condition']}</h2>
+                                                         <img style='height: 100px'  src='../{$allAchievements[$i]['url']}'>
+                                                         <h3>{$allAchievements[$i]['description']}</h3>
+                                                     
+                                                 </div>
+                                             </form>
+                                         </div>
+                                     </div>
+                                 </div>";
+ 
+                                 }

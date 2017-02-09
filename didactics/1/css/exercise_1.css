@@ -1,0 +1,25 @@
+.coin{
+    opacity: 0.7;
+}
+
+.coin-xs{
+    height:35px;
+}
+
+.coin-md{
+    height: 45px;
+}
+
+.coin-lg{
+    height: 55px;
+}
+
+#droppable-left > h1, #droppable-right > h1{
+    font-size: 150pt;
+    margin: 0px auto 0px auto;
+}
+
+#droppable-left > img, #droppable-right > img{
+    height: 165pt;
+    margin: 0px auto 0px auto;
+}

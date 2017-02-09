@@ -1,0 +1,35 @@
+#player1-name {
+    color: #ff5d5d;
+    text-shadow: 1px 1px black;
+}
+
+#player2-name {
+    color: #7197ff;
+    text-shadow: 1px 1px black;
+}
+
+#player3-name {
+    color: #ffc155;
+    text-shadow: 1px 1px black;
+}
+
+#player4-name {
+    color: #50ff8f;
+    text-shadow: 1px 1px black;
+}
+
+.player1-bg{
+    background-color: #ff5d5d !important;
+}
+
+.player2-bg{
+    background-color: #7197ff !important;
+}
+
+.player3-bg{
+    background-color: #ffc155 !important;
+}
+
+.player4-bg{
+    background-color: #50ff8f !important;
+}

@@ -1,0 +1,11 @@
+.sprite-equation {
+    display: inline-flex;
+}
+
+.sprite-equation img{
+    height:  40pt;
+}
+
+#arrow{
+    height: 85pt;
+}

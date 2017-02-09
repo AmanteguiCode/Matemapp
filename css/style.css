@@ -1,0 +1,39 @@
+#login-menu, #link-ul{
+    background: #ffffff;
+}
+
+#link{
+    color: #ffffff;
+}
+
+input {
+    text-align: center;
+}
+
+.sprite-equation img{
+    height: 15pt;
+}
+.sprite-equation-carousel {
+    font-size: 17px;
+}
+
+@font-face{
+    font-family:"Londrina";
+    src:url(../img/typography/Londrina.otf) format("opentype");
+}
+
+*{
+    font-family: Londrina;
+}
+
+.move-up{
+    margin-top: -50px;
+}
+
+.move-left{
+    margin-left: -35px;
+}
+
+.no-border-top{
+    border-top: none;
+}
